@@ -1,0 +1,13 @@
+version: '3'
+services:
+  countryinfo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - 8080:8080
+    env_file:
+      - docker-compse.env
+    environment:
+      - ENV=development
+      - "TZ=America/Fortaleza"
